@@ -1,19 +1,31 @@
 import PropTypes from 'prop-types'
 import DonationCard from "../DonationCard/DonationCard";
 
-const Donations = ({donationResult}) => {
+const Donations = ({ clicked, donationResult, display }) => {
 
-    return (
-        <div className="grid grid-cols-4 gap-6 my-20">
-            {
-                donationResult.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
-            }
-        </div>
-    );
+    if (clicked) {
+        return (
+            <div className="grid grid-cols-4 gap-6 my-20">
+                {
+                    display.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
+                }
+            </div>
+        )
+    } else {
+        return (
+            <div className="grid grid-cols-4 gap-6 my-20">
+                {
+                    donationResult.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
+                }
+            </div>
+        );
+    }
 };
 
 Donations.propTypes = {
-    donationResult: PropTypes.array
+    clicked: PropTypes.bool,
+    donationResult: PropTypes.array,
+    display: PropTypes.array
 }
 
 export default Donations;
