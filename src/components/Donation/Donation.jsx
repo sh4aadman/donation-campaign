@@ -35,7 +35,7 @@ const Donation = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-2 my-10">
+            <div className="grid grid-cols-2 gap-6 my-10">
                 {
                     displayDonationData.slice(0, dataLimit).map(donationData => <Donated key={donationData.id} donationData={donationData}></Donated>)
                 }

@@ -18,13 +18,15 @@ const DonationDetails = () => {
 
     return (
         <div className="mt-8">
-            <div className="relative">
-                <img className="relative w-full h-[600px] rounded-lg border" src={donation.donation_image} alt="" />
-                <div className="">
-                    <div className="relative">
-                        <div className="relative h-32 bg-black opacity-25">{/* overlay */}</div>
-                        <button onClick={() => handleDonate(idInt)} className="absolute bottom-8 left-8 btn-error py-4 px-7 text-white text-xl font-bold rounded">Donate {donation.donation_price}</button>
-                    </div>
+            <div className="relative h-[400px] w-full">
+                <div className="absolute z-10 w-full h-[400px]">
+                    <img className="w-full h-[400px] rounded-2xl" src={donation.donation_image} alt="" />
+                </div>
+                <div className="absolute z-20 bottom-0 w-full h-[100px] opacity-50">
+                    <div className="w-full h-full bg-gradient-to-b from-black to-white">{/* overlay */}</div>
+                </div>
+                <div className="absolute z-30 bottom-5 left-5">
+                    <button onClick={() => handleDonate(idInt)} className={`bg-[${donation.category_color}] py-4 px-7 text-white text-xl font-bold rounded`}>Donate {donation.donation_price}</button>
                 </div>
             </div>
             <h2 className="text-4xl font-bold mt-14">{donation.donation_title}</h2>

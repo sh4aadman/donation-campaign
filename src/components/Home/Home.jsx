@@ -9,7 +9,7 @@ const Home = () => {
     const [display, setDisplay] = useState([])
 
     useState( () => {
-        fetch('donations.json')
+        fetch('/donations.json')
         .then(response => response.json())
         .then(data => setDonationResult(data))
     } , [])
