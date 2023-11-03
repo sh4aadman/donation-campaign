@@ -5,7 +5,7 @@ const Donations = ({ clicked, donationResult, display }) => {
 
     if (clicked) {
         return (
-            <div className="grid grid-cols-4 gap-6 my-20">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-20">
                 {
                     display.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
                 }
@@ -13,7 +13,7 @@ const Donations = ({ clicked, donationResult, display }) => {
         )
     } else {
         return (
-            <div className="grid grid-cols-4 gap-6 my-20">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-20">
                 {
                     donationResult.map(donation => <DonationCard key={donation.id} donation={donation}></DonationCard>)
                 }

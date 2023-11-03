@@ -16,6 +16,9 @@ const DonationDetails = () => {
         toast('Thank you for your donation!')
     }
 
+    // eslint-disable-next-line no-unused-vars
+    const categoryColor = ['bg-[#FF5733]', 'bg-[#58D68D]', 'bg-[#3498DB]', 'bg-[#F39C12]']
+
     return (
         <div className="mt-8">
             <div className="relative h-[400px] w-full">

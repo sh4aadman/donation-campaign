@@ -48,7 +48,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="">
             <div className="text-center h-[500px] w-full relative">
                 <div className="absolute z-20 bg-gradient-to-b from-black to-white h-full w-full opacity-70 rounded-lg">
                     {/* Overlay */}

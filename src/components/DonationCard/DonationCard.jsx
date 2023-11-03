@@ -5,6 +5,15 @@ const DonationCard = ({ donation }) => {
 
     const { id, donation_image, category_name, donation_title, category_color, category_background, card_background } = donation;
 
+    // eslint-disable-next-line no-unused-vars
+    const cardBackground = ['bg-[#F9EBEA]', 'bg-[#E8F8F5]' , 'bg-[#EBF5FB]', 'bg-[#FDEBD0]']
+
+    // eslint-disable-next-line no-unused-vars
+    const categoryColor = ['text-[#FF5733]', 'text-[#58D68D]', 'text-[#3498DB]', 'text-[#F39C12]']
+
+    // eslint-disable-next-line no-unused-vars
+    const categoryBackground = ['bg-[#FFDDEE]', 'bg-[#CCFFDD]', 'bg-[#BBEEFF]', 'bg-[#FFCCAA]']
+
     return (
         <Link to={`/donations/${id}`}>
             <div className={`card bg-[${card_background}]`}>
